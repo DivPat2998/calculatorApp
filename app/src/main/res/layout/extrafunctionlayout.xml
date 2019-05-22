@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/sqrt7"
+        style="@style/operandStyleButtons"
+        android:onClick="operandClick2"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:text="√"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sqrt9" />
+
+    <Button
+        android:id="@+id/sqrt"
+        style="@style/operandStyleButtons"
+        android:onClick="operandClick2"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:text="sin"
+        app:layout_constraintBottom_toTopOf="@+id/sqrt9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sqrt11" />
+
+    <Button
+        android:id="@+id/sqrt10"
+        style="@style/operandStyleButtons"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:onClick="operandClick2"
+        android:text="tan"
+        app:layout_constraintBottom_toTopOf="@+id/sqrt11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/sqrt11"
+        style="@style/operandStyleButtons"
+        android:onClick="operandClick2"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:text="cos"
+        app:layout_constraintBottom_toTopOf="@+id/sqrt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sqrt10" />
+
+    <Button
+        android:id="@+id/sqrt9"
+        style="@style/operandStyleButtons"
+        android:onClick="operandClick"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:text="^"
+        app:layout_constraintBottom_toTopOf="@+id/sqrt7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sqrt" />
+
+</android.support.constraint.ConstraintLayout>
