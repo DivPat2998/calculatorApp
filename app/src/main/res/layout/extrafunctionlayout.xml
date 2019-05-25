@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/sqrt7"
+        android:id="@+id/SQRT"
         style="@style/operandStyleButtons"
         android:onClick="operandClick2"
         android:layout_width="100dp"
@@ -13,50 +13,50 @@
         android:text="√"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sqrt9" />
+        app:layout_constraintTop_toBottomOf="@+id/POW" />
 
     <Button
-        android:id="@+id/sqrt"
+        android:id="@+id/SIN"
         style="@style/operandStyleButtons"
         android:onClick="operandClick2"
         android:layout_width="100dp"
         android:layout_height="0dp"
         android:text="sin"
-        app:layout_constraintBottom_toTopOf="@+id/sqrt9"
+        app:layout_constraintBottom_toTopOf="@+id/POW"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sqrt11" />
+        app:layout_constraintTop_toBottomOf="@+id/COS" />
 
     <Button
-        android:id="@+id/sqrt10"
+        android:id="@+id/TAN"
         style="@style/operandStyleButtons"
         android:layout_width="100dp"
         android:layout_height="0dp"
         android:onClick="operandClick2"
         android:text="tan"
-        app:layout_constraintBottom_toTopOf="@+id/sqrt11"
+        app:layout_constraintBottom_toTopOf="@+id/COS"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/sqrt11"
+        android:id="@+id/COS"
         style="@style/operandStyleButtons"
         android:onClick="operandClick2"
         android:layout_width="100dp"
         android:layout_height="0dp"
         android:text="cos"
-        app:layout_constraintBottom_toTopOf="@+id/sqrt"
+        app:layout_constraintBottom_toTopOf="@+id/SIN"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sqrt10" />
+        app:layout_constraintTop_toBottomOf="@+id/TAN" />
 
     <Button
-        android:id="@+id/sqrt9"
+        android:id="@+id/POW"
         style="@style/operandStyleButtons"
         android:onClick="operandClick"
         android:layout_width="100dp"
         android:layout_height="0dp"
         android:text="^"
-        app:layout_constraintBottom_toTopOf="@+id/sqrt7"
+        app:layout_constraintBottom_toTopOf="@+id/SQRT"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sqrt" />
+        app:layout_constraintTop_toBottomOf="@+id/SIN" />
 
 </android.support.constraint.ConstraintLayout>
