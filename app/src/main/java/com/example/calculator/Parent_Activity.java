@@ -1,5 +1,6 @@
 package com.example.calculator;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -8,6 +9,9 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.view.inputmethod.InputMethodManager;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,17 +29,40 @@ public class Parent_Activity extends AppCompatActivity {
         adapter.addItem(new FinanceActivity());
 
         viewPager.setAdapter(adapter);
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int i, float v, int i1) {
+
+            }
+
+            @Override
+            public void onPageSelected(int i) {
+                if (i == 0) {
+                    InputMethodManager imm = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
+                    View view = getCurrentFocus();
+                    if (view == null) {
+                        view = new View(Parent_Activity.this);
+                    }
+                    imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int i) {
+
+            }
+        });
     }
 
-    class Adapter extends FragmentPagerAdapter{
+    class Adapter extends FragmentPagerAdapter {
         List<Fragment> fragments = new ArrayList<>();
 
-         Adapter(FragmentManager fm) {
+        Adapter(FragmentManager fm) {
             super(fm);
         }
 
-         void addItem(Fragment fragment) {
-             fragments.add(fragment);
+        void addItem(Fragment fragment) {
+            fragments.add(fragment);
         }
 
 
@@ -51,11 +78,11 @@ public class Parent_Activity extends AppCompatActivity {
 
         @Nullable
         @Override
-        public CharSequence getPageTitle (int position) {
+        public CharSequence getPageTitle(int position) {
 
-            if(position == 0){
+            if (position == 0) {
                 return "Calculator";
-            }else{
+            } else {
                 return "Finance";
             }
         }

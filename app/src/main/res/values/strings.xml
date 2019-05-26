@@ -3,9 +3,9 @@
 
     <array name="countries">
         <item>USD</item>
-        <item>KHR</item>
+        <item>CAD</item>
         <item>INR</item>
-        <item>AED</item>
+        <item>GBP</item>
     </array>
 
 </resources>
