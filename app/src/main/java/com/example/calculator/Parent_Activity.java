@@ -25,8 +25,8 @@ public class Parent_Activity extends AppCompatActivity {
         tabs.setupWithViewPager(viewPager);
 
         Adapter adapter = new Adapter(getSupportFragmentManager());
-        adapter.addItem(new MainActivity());
         adapter.addItem(new FinanceActivity());
+        adapter.addItem(new MainActivity());
 
         viewPager.setAdapter(adapter);
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
