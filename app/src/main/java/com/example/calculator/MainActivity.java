@@ -61,11 +61,11 @@ public class MainActivity extends Fragment {
         rootView.findViewById(R.id.multiply).setOnClickListener(operandClick);
         rootView.findViewById(R.id.divide).setOnClickListener(operandClick);
 
-        rootView.findViewById(R.id.TAN).setOnClickListener(operandClick2);
-        rootView.findViewById(R.id.SIN).setOnClickListener(operandClick2);
-        rootView.findViewById(R.id.COS).setOnClickListener(operandClick2);
-        rootView.findViewById(R.id.SQRT).setOnClickListener(operandClick2);
-        rootView.findViewById(R.id.POW).setOnClickListener(operandClick2);
+        getActivity().findViewById(R.id.TAN).setOnClickListener(operandClick2);
+        getActivity().findViewById(R.id.SIN).setOnClickListener(operandClick2);
+        getActivity().findViewById(R.id.COS).setOnClickListener(operandClick2);
+        getActivity().findViewById(R.id.SQRT).setOnClickListener(operandClick2);
+        getActivity().findViewById(R.id.POW).setOnClickListener(operandClick2);
         return rootView;
     }
 

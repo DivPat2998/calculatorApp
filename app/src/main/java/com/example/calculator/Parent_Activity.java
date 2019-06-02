@@ -8,7 +8,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
@@ -37,13 +39,16 @@ public class Parent_Activity extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int i) {
-                if (i == 0) {
+                if (i == 1) {
+                    ((DrawerLayout) findViewById(R.id.drawer)).setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
                     InputMethodManager imm = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
                     View view = getCurrentFocus();
                     if (view == null) {
                         view = new View(Parent_Activity.this);
                     }
                     imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+                } else {
+                    ((DrawerLayout) findViewById(R.id.drawer)).setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED, Gravity.BOTTOM | Gravity.END);
                 }
             }
 
